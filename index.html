@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abhay — Your Agentic Real Estate Team | firstmind.space</title>
+<title>Sharon — Your AI Real Estate Team | firstmind.space</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -80,21 +80,24 @@ nav{
 }
 .hero-container{
   display:grid;
-  grid-template-columns:1fr 1.2fr;
-  gap:2rem;
-  align-items:center;
+  grid-template-columns:0.8fr 1.5fr;
+  gap:1rem;
+  align-items:start; /* Changed to start so both columns align their tops perfectly */
   width:100%;
-  max-width:1400px;
+  max-width:1500px;
   margin:0 auto;
   position:relative;
   z-index:1;
 }
-.hero-content{position:relative;z-index:1;}
+.hero-content{position:relative;z-index:2;}
 .hero-architecture{
-  width:100%;
+  width:115%;
+  margin-left:-8%;
+  margin-top:-2rem; /* Adjusted to perfectly align the boxes visually with the top text tag without overflowing */
   opacity:0;
   animation:fadeUp 0.8s 0.6s forwards;
   position:relative;
+  z-index:1;
 }
 .hero-architecture svg{
   width:100%;
@@ -261,7 +264,7 @@ h2 em{color:var(--gold);font-style:italic}
 }
 .problem-highlight p{color:var(--text2);font-size:1.1rem;}
 
-/* SIMULATION SECTION (Unchanged) */
+/* SIMULATION SECTION */
 .sim-section{
   background:var(--bg);
   padding:6rem 0;
@@ -403,7 +406,7 @@ h2 em{color:var(--gold);font-style:italic}
 .btn-sim:hover{border-color:var(--gold);color:var(--gold)}
 .btn-sim.active-btn{background:var(--gold);color:#06060e;border-color:var(--gold)}
 
-/* CRM SECTION (Unchanged) */
+/* CRM SECTION */
 .crm-section{background:var(--bg2)}
 .pipeline-wrap{
   display:flex;gap:1rem;overflow-x:auto;
@@ -535,6 +538,11 @@ canvas#particles{
 @media(max-width:1024px){
   .hero-container{grid-template-columns: 1fr;}
   .hero-content{max-width:100%;}
+  .hero-architecture{
+    width:100%;
+    margin-left:0;
+    margin-top:4rem; /* Kept the padding spacing for mobile view */
+  }
 }
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}
@@ -566,7 +574,7 @@ canvas#particles{
 <!-- NAV -->
 <nav>
   <div class="logo">firstmind<span>.space</span></div>
-  <div class="nav-for">Built personally for <strong>Abhay</strong> · Texas Real Estate</div>
+  <div class="nav-for">Built personally for <strong>Sharon</strong> · Texas Real Estate</div>
 </nav>
 
 <!-- 1. HERO WITH ARCHITECTURE -->
@@ -581,9 +589,9 @@ canvas#particles{
     <div class="hero-content">
       <div class="hero-tag">
         <span class="dot-live"></span>
-        6-Agent's workflow · Built for Texas Real Estate
+        6-Agent AI System · Built for Austin Real Estate
       </div>
-      <h1>Abhay, meet your<br><em>AI team</em> that never<br>sleeps.</h1>
+      <h1>Sharon, meet your<br><em>AI team</em> that never<br>sleeps.</h1>
       <p class="hero-sub">
         While you're showing homes, attending closings, and living life —<br>
         <strong>6 intelligent agents</strong> are responding to every lead, building trust, and booking your calendar.
@@ -613,7 +621,7 @@ canvas#particles{
     </div>
 
     <!-- RIGHT: FANCY ARCHITECTURE FLOW -->
-    <div class="hero-architecture">
+    <div class="hero-architecture" id="architecture">
       <svg viewBox="0 0 900 420" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -793,7 +801,7 @@ canvas#particles{
           <div class="chat-header">
             <div class="chat-avatar">SC</div>
             <div>
-              <div class="chat-name">Abhay's Concierge</div>
+              <div class="chat-name">Sharon's Concierge</div>
               <div class="chat-status">● Online</div>
             </div>
           </div>
@@ -845,7 +853,7 @@ canvas#particles{
             <div class="step-num">04:50</div>
             <div class="step-content">
               <h4>Intent Detected: WARM</h4>
-              <p>Sarah mentions "we need to be in Texas by August." Agent 3 scores her as urgent.</p>
+              <p>Sarah mentions "we need to be in Austin by August." Agent 3 scores her as urgent.</p>
               <span class="step-badge">Agent 3 → Score: 82/100</span>
             </div>
           </div>
@@ -884,7 +892,7 @@ canvas#particles{
       <div class="col-header">New Lead <span class="col-count">3</span></div>
       <div class="crm-card">
         <div class="crm-card-name">Sarah M.</div>
-        <div class="crm-card-detail">Denver → Texas · 3 kids</div>
+        <div class="crm-card-detail">Denver → Austin · 3 kids</div>
         <span class="lead-score score-hot">⬆ Score 82</span>
       </div>
       <div class="crm-card">
@@ -1034,7 +1042,7 @@ canvas#particles{
 <!-- 6. CTA -->
 <section class="cta-section">
   <span class="section-tag" style="display:block;text-align:center">Ready to Begin</span>
-  <h2><span class="cta-name">Abhay,</span> your AI team<br>is ready to be deployed.</h2>
+  <h2><span class="cta-name">Sharon,</span> your AI team<br>is ready to be deployed.</h2>
   <p>We build, we test, we launch. You focus on closing deals.<br>Setup takes 2–3 weeks. Your first AI response goes live on day one.</p>
   <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
     <a href="https://firstmind.space" class="btn-gold" target="_blank">Book a Strategy Call</a>
@@ -1049,7 +1057,7 @@ canvas#particles{
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">firstmind.space</div>
-  <p>This proposal was built personally for Abhay · © 2025 firstmind.space</p>
+  <p>This proposal was built personally for Sharon · © 2025 firstmind.space</p>
   <p>Powered by n8n · Claude AI · Built with ❤️ by Bhuvnesh</p>
 </footer>
 
@@ -1149,13 +1157,13 @@ reveals.forEach(r=>revealObs.observe(r));
 const messages=[
   {type:'system',text:'📍 New lead from Zillow — Sarah M., Denver CO',delay:500},
   {type:'system',text:'⚡ Agent 1 triggered — responding in 38 seconds',delay:1500},
-  {type:'outgoing',text:"Hi Sarah! 👋 This is Abhay's team — thank you so much for your interest in the Texas listing. Moving from Denver is a big (and exciting!) step. I'd love to learn more about what you're looking for. What's drawing you to Texas?",delay:2500},
-  {type:'incoming',text:"Hi! Yes, we have 3 kids and my husband just got a job offer in Texas. We're hoping to be there by August. A bit stressed about the whole thing honestly 😅",delay:5000},
+  {type:'outgoing',text:"Hi Sarah! 👋 This is Sharon's team — thank you so much for your interest in the Austin listing. Moving from Denver is a big (and exciting!) step. I'd love to learn more about what you're looking for. What's drawing you to Austin?",delay:2500},
+  {type:'incoming',text:"Hi! Yes, we have 3 kids and my husband just got a job offer in Austin. We're hoping to be there by August. A bit stressed about the whole thing honestly 😅",delay:5000},
   {type:'system',text:'🧠 Agent 3 detected: Family buyer · Urgent timeline · Mild stress',delay:6000},
   {type:'outgoing',text:"August gives us a great runway! And I completely understand the stress — relocating with three kids is a lot to juggle. Let me help make this easier. What neighborhoods did you have in mind, or would you like some personalised recommendations based on your family's needs?",delay:7000},
   {type:'incoming',text:"Personalised recommendations would be amazing. Our budget is around $550k. Good schools are the priority.",delay:9500},
   {type:'system',text:'📊 Lead score updated: 82/100 — WARM → Agent 4 activated',delay:10500},
-  {type:'outgoing',text:"Perfect. Round Rock, Cedar Park, and Pflugerville are all excellent for families at that budget — and they have some of Texas's top-rated schools. Would you like to hop on a quick 20-minute Zoom call so I can walk you through each area? I have Thursday and Friday afternoons open 🗓️",delay:11500},
+  {type:'outgoing',text:"Perfect. Round Rock, Cedar Park, and Pflugerville are all excellent for families at that budget — and they have some of Austin's top-rated schools. Would you like to hop on a quick 20-minute Zoom call so I can walk you through each area? I have Thursday and Friday afternoons open 🗓️",delay:11500},
   {type:'incoming',text:"Thursday 2pm works! Thank you so much, this already feels less overwhelming 😊",delay:14000},
   {type:'system',text:'✅ Meeting booked — Thu 2pm · Calendar updated · Nurture sequence started',delay:15000},
 ];
